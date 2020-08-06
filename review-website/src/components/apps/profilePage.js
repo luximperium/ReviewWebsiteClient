@@ -2,7 +2,7 @@ import React from 'react';
 import "../../App.css";
 import Auth from "../Auth/Auth"
 
-const ProfileIndex = () => {
+const ProfilePage = () => {
     return (
         <div>
             <h1>Your profile here!</h1>
@@ -10,4 +10,4 @@ const ProfileIndex = () => {
     );
 };
 
-export default ProfileIndex;
+export default ProfilePage;
