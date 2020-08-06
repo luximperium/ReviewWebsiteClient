@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+body {
+  background-color: gray;
+  box-shadow: inset 2em 2em 2em 2em black;
+  width: 100vw;
+  height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.searchMain {
+  height: 3em;
+  width: 30.55em;
+  border-radius: 0.5em;
+  border: solid 2px #ffc000;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main {
+  transform: translateY(-12em) translateX(6em);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.welcomeMainText {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.welcomeSubText {
+  color: #ffc000;
+}
+.MusiqueBaseTitle {
+  transform: translateX(5em) translateY(-0.3em);
+  width: 8em;
+}
+.header {
+  border-bottom: 1em solid #ffc000;
+  background-color: black;
+  height: 4em;
+}
+.sidebar-styling {
+  background-color: black;
+  position: absolute;
+  transform: translateY(-15em);
+  width: 4em;
+  height: 100%;
+  border-right: 1em solid #ffc000;
+  z-index: 0;
+}
+.sidebar {
+  padding-top: 3em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebarIcon {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.vinylrecordcss {
+  z-index: 1;
+  position: relative;
+  width: 14em;
+  transform: translateY(-11em) translateX(-7em);
+}
+.playbutton {
+  width: 4em;
+}
+.search {
+  width: 20em;
+  height: 2.4em;
+  border-radius: 0.5em;
+  border: solid 2px #ffc000;
+  transform: translateY(-0.5em);
+}
+.searchButton {
+  width: fit-content;
+  height: 2.5em;
+  background-color: black ;
+  border-radius: 0.5em;
+  border: solid 2px #ffc000;
+  transform: translateX(0.5em) translateY(-0.65em);
+}
+.searchButtonImage {
+  width: 25px;
 }
