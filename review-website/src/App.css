@@ -12,6 +12,8 @@ body {
 }
 .main {
   transform: translateY(-12em) translateX(6em);
+  width: fit-content;
+  height: fit-content;
 }
 .welcomeMainText {
   color: white;
@@ -31,14 +33,14 @@ body {
 .sidebar-styling {
   background-color: black;
   position: absolute;
-  transform: translateY(-15em);
+  padding-bottom: 39.96em;
+  padding-top: 5em;
+  transform: translateY(-17em);
   width: 4em;
-  height: 100%;
   border-right: 1em solid #ffc000;
   z-index: 0;
 }
 .sidebar {
-  padding-top: 3em;
 }
 
 .sidebarIcon {
