@@ -41,6 +41,7 @@ body {
   z-index: 0;
 }
 .sidebar {
+  font-family: initial;
 }
 
 .sidebarIcon {

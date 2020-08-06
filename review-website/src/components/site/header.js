@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
-  Nav,
-  Row,
-  Col,
-  Button,
+  Nav
 } from "reactstrap";
 import "../../App.css";
 import MusiqueBase from "../../assets/musiquebase.png";
