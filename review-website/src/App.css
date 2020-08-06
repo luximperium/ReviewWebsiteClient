@@ -31,7 +31,7 @@ body {
 .sidebar-styling {
   background-color: black;
   position: absolute;
-  transform: translateY(-14em);
+  transform: translateY(-15em);
   width: 4em;
   height: 100%;
   border-right: 1em solid #ffc000;
@@ -54,9 +54,21 @@ body {
 .playbutton {
   width: 4em;
 }
-.searchHeader {
+.search {
   width: 20em;
-  transform: translateY(-0.3em) translateX(-0.5em);
+  height: 2.4em;
   border-radius: 0.5em;
   border: solid 2px #ffc000;
+  transform: translateY(-0.5em);
+}
+.searchButton {
+  width: fit-content;
+  height: 2.5em;
+  background-color: black ;
+  border-radius: 0.5em;
+  border: solid 2px #ffc000;
+  transform: translateX(0.5em) translateY(-0.65em);
+}
+.searchButtonImage {
+  width: 25px;
 }

@@ -10,6 +10,7 @@ import catalog from "../../assets/folder-7.png";
 import styled from "styled-components";
 import "../../App.css";
 import { Row, Col } from "reactstrap";
+import Results from '../apps/results';
 
 const SidebarItem = styled.img`
     width 2em;
@@ -54,6 +55,9 @@ const Sidebar = () => {
           </Route>
           <Route exact path="/">
             <Main />
+          </Route>
+          <Route exact path="/results">
+            <Results />
           </Route>
         </Switch>
       </div>

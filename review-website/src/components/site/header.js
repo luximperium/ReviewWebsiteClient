@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
   Row,
   Col,
+  Button,
 } from "reactstrap";
 import "../../App.css";
 import MusiqueBase from "../../assets/musiquebase.png";
+import Searchbar from "../apps/searchBar";
+
 
 const Header = () => {
+
   return (
       <header>
         <Navbar className="header">
@@ -19,7 +21,7 @@ const Header = () => {
               <img className="MusiqueBaseTitle" src={MusiqueBase} />
           </NavbarBrand>
           <Nav className="ml-auto" navbar>
-          <input type="text" className="searchHeader" placeholder="Search for music..." />
+            <Searchbar />
           </Nav>
         </Navbar>
       </header>

@@ -9,7 +9,9 @@ import Vinylrecord from './components/site/vinylrecord';
 function App() {
   return (
     <div className="App">
+      <Router>
       <Header />
+      </Router>
       <Vinylrecord />
       <Router>
         <Sidebar />
