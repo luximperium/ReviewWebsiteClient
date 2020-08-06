@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "../../App.css";
+import Auth from "../Auth/Auth"
+import ProfilePage from "./profilePage"
 
-const Profile = () => {
+const Profile = (props) => {
+    const [sessionToken, setSessionToken] = useState('');
+
+    useEffect(() => {
+        if (localStorage.getItem('token')){
+          setSessionToken(localStorage.getItem('token'));
+        }
+      }, [])
+
+    const protectedViews = () => {
+        return (sessionToken === localStorage.getItem('token') ? <ProfilePage token={sessionToken}/> : <Auth updateToken={props.updateToken}/>)
+      }
+
     return (
-        <div className="main">
-            <div className="mainDiv">
-                <h1 className="welcomeMainText">Welcome to Your Profile!</h1>
-                <p className="welcomeSubText">
-                    You!
-                </p>
-            </div>
+        <div>
+            {protectedViews()}
         </div>
     );
 };
