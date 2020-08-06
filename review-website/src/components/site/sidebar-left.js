@@ -7,6 +7,7 @@ import Catalogs from "../apps/catalogs";
 import pfp from "../../assets/user.png";
 import listpic from "../../assets/list-1-invert.png";
 import catalog from "../../assets/folder-7.png";
+import logout from "../../assets/logout.png";
 import styled from "styled-components";
 import "../../App.css";
 import { Row, Col } from "reactstrap";
@@ -17,7 +18,7 @@ const SidebarItem = styled.img`
     transform: translateX(0.5em);
 `;
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   return (
     <div className="sidebar-master">
       <div className="sidebar-styling">
@@ -32,11 +33,11 @@ const Sidebar = () => {
               <SidebarItem src={listpic} />
             </Link>
           </Row>
+          <Link to="/main">
           <Row className="sidebarIcon">
-            <Link to="/catalogs">
-              <SidebarItem src={catalog} />
-            </Link>
+              <SidebarItem onClick={props.clickLogout} src={logout} />
           </Row>
+          </Link>
         </Col>
       </div>
       <div className="sidebar-route">
