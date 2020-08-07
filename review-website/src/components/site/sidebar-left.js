@@ -43,6 +43,9 @@ const Sidebar = () => {
           <Route exact path="/main">
             <Main />
           </Route>
+          <Route exact path="/">
+            <Main />
+          </Route>
           <Route exact path="/profile">
             <Profile />
           </Route>

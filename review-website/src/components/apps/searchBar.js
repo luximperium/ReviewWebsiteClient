@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../../App.css";
-import SearchButton from "../../assets/search-invert.png";
-import { Route, Link, Switch, Redirect } from "react-router-dom";
-import { Row, Col, Button } from "reactstrap";
 
 const Searchbar = () => {
   const [hasSearched, sethasSearched] = useState(false);
@@ -11,7 +8,7 @@ const Searchbar = () => {
   useEffect(() => {
       if (searchterm) {
     fetch(
-      `https://api.discogs.com/database/search?q=${searchterm}&key=rWUoIrWxrdwdVKDvrckA&secret=eLoZojJoHrrcqwLxgXLzYpWuNImuFVgz`
+      `https://api.discogs.com/database/search?q=${searchterm}&per_page=10&key=rWUoIrWxrdwdVKDvrckA&secret=eLoZojJoHrrcqwLxgXLzYpWuNImuFVgz`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -34,7 +31,7 @@ const Searchbar = () => {
         className="search"
         placeholder="Search for music..."
       />
-      <ul>{hasSearched ? results.map(d => <li>{d.title}</li>) : <br />}</ul>
+      {hasSearched ? <ul className="searchList">{hasSearched ? results.map(d => <li className="searchListItem"><div><a href={d.resource_url} className="searchListItemLink">{d.title}</a></div><div><a href={d.resource_url}><img src={d.thumb} className="searchListItemPic" /></a></div></li>) : <br />}</ul> : null}
     </div>
   );
 };

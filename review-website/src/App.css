@@ -1,8 +1,8 @@
 body {
   background-color: gray;
-  box-shadow: inset 2em 2em 2em 2em black;
+  background: linear-gradient(black 0%, gray 50%);
   width: 100vw;
-  height: 100vh;
+  height: 201.5em;
 }
 .searchMain {
   height: 3em;
@@ -21,22 +21,25 @@ body {
 .welcomeSubText {
   color: #ffc000;
 }
-.MusiqueBaseTitle {
-  transform: translateX(5em) translateY(-0.3em);
+.MusiqueBaseLogo {
+  position: absolute;
   width: 8em;
+  transform: translateX(6em);
+  z-index: 5;
 }
 .header {
   border-bottom: 1em solid #ffc000;
   background-color: black;
-  height: 4em;
+  height: 2.5em;
 }
 .sidebar-styling {
   background-color: black;
   position: absolute;
   padding-bottom: 39.96em;
   padding-top: 5em;
+  height: 200em;
   transform: translateY(-17em);
-  width: 4em;
+  width: 4.5em;
   border-right: 1em solid #ffc000;
   z-index: 0;
 }
@@ -47,22 +50,20 @@ body {
 .sidebarIcon {
   padding-top: 1em;
   padding-bottom: 1em;
+  transform: translateX(0.4em);
 }
 .vinylrecordcss {
   z-index: 1;
   position: relative;
   width: 14em;
-  transform: translateY(-11em) translateX(-7em);
-}
-.playbutton {
-  width: 4em;
+  transform: translateY(-11em) translateX(-7.1em);
 }
 .search {
+  position: static;
   width: 20em;
   height: 2.4em;
   border-radius: 0.5em;
   border: solid 2px #ffc000;
-  transform: translateY(-0.5em);
 }
 .searchButton {
   width: fit-content;
@@ -74,4 +75,46 @@ body {
 }
 .searchButtonImage {
   width: 25px;
+}
+.searchList {
+  list-style: square;
+  color: black;
+  background-color: white;
+  border-radius: 0.5em;
+  border: solid #ffc000;
+  max-width: 20em;
+  max-height: 150em;
+  padding-right: 1em;
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  box-shadow: inset 0px 0px 0.2em 0.2em black;
+}
+.searchListItem {
+  text-decoration: none;
+  padding: 1em;
+}
+.searchListItemLink:hover {
+  color: gray;
+  text-decoration: none;
+}
+.searchListItem:hover {
+  color: gray;
+}
+.searchNav {
+  transform: translateY(-1.7em);
+}
+.searchListItemPic {
+  width: 100px;
+  border-radius: 0.5em;
+}
+.searchListItemPic:hover {
+  width: 100px;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 10px 2px gray;
+}
+.searchListItemLink {
+  color: black;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

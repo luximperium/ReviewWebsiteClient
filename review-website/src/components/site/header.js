@@ -5,7 +5,6 @@ import {
   Nav
 } from "reactstrap";
 import "../../App.css";
-import MusiqueBase from "../../assets/musiquebase.png";
 import Searchbar from "../apps/searchBar";
 
 
@@ -14,11 +13,10 @@ const Header = () => {
   return (
       <header>
         <Navbar className="header">
-          <NavbarBrand href="/main">
-              <img className="MusiqueBaseTitle" src={MusiqueBase} />
-          </NavbarBrand>
           <Nav className="ml-auto" navbar>
+            <div className="searchNav">
             <Searchbar />
+            </div>
           </Nav>
         </Navbar>
       </header>
