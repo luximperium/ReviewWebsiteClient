@@ -10,8 +10,8 @@ import Musique from "./components/site/musiquebaselogo";
 function App() {
   return (
     <div className="App">
+      <Musique />     
       <Router>
-      <Musique />
       <Header />
       </Router>
       <Vinylrecord />
