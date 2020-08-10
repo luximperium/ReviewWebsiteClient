@@ -28,26 +28,26 @@ const Signup = (props) => {
         <div>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
-                    <Label htmlFor="username">Username</Label>
+                    <Label htmlFor="username">Username:</Label>
                     <Input onChange={(e) => setUsername(e.target.value)} name="username" value={username} />
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">Email:</Label>
                     <Input onChange={(e) => setEmail(e.target.value)} name="email" value={email} />
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="password">Password</Label>
+                    <Label htmlFor="password">Password:</Label>
                     <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password} />
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="firstName">First Name</Label>
+                    <Label htmlFor="firstName">First Name:</Label>
                     <Input onChange={(e) => setFirstName(e.target.value)} name="firstName" value={firstName} />
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="lastName">Last Name</Label>
+                    <Label htmlFor="lastName">Last Name:</Label>
                     <Input onChange={(e) => setLastName(e.target.value)} name="lastName" value={lastName} />
                 </FormGroup>
-                <Button type="submit">Signup</Button>
+                <Button type="submit">Submit</Button>
             </Form>
         </div>
     )
