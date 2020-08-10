@@ -12,6 +12,7 @@ import styled from "styled-components";
 import "../../App.css";
 import { Row, Col } from "reactstrap";
 import Results from '../apps/results';
+import ReviewIndex from '../apps/Review/ReviewIndex'
 
 const SidebarItem = styled.img`
     width 2em;
@@ -29,7 +30,7 @@ const Sidebar = (props) => {
             </Link>
           </Row>
           <Row className="sidebarIcon">
-            <Link to="/lists">
+            <Link to="/reviews">
               <SidebarItem src={listpic} />
             </Link>
           </Row>
@@ -48,8 +49,8 @@ const Sidebar = (props) => {
           <Route exact path="/profile">
             <Profile />
           </Route>
-          <Route exact path="/lists">
-            <Lists />
+          <Route exact path="/reviews">
+            <ReviewIndex token={props.token} />
           </Route>
           <Route exact path="/catalogs">
             <Catalogs />

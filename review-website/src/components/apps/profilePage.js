@@ -4,8 +4,10 @@ import Auth from "../Auth/Auth"
 
 const ProfilePage = () => {
     return (
-        <div>
-            <h1>Your profile here!</h1>
+        <div className="main">
+            <div className="mainDiv">
+                <h1>Your Profile Here!</h1>
+            </div>
         </div>
     );
 };

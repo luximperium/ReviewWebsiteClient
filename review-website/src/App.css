@@ -72,3 +72,7 @@ body {
 .searchButtonImage {
   width: 25px;
 }
+
+.createForm {
+  transform: translateY(-1em) translateX(-2em);
+}
