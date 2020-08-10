@@ -28,9 +28,6 @@ function App() {
   return (
     <div className="App">
       <Musique />     
-      <Router>
-      <Header />
-      </Router>
       <Vinylrecord />
       <Router>
         <Sidebar clickLogout={clearToken} />

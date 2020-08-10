@@ -71,7 +71,7 @@ body {
   background-color: black ;
   border-radius: 0.5em;
   border: solid 2px #ffc000;
-  transform: translateX(0.5em) translateY(-0.65em);
+  transform: translateX(0.5em) translateY(-0.20em);
 }
 .searchButtonImage {
   width: 25px;
@@ -117,4 +117,14 @@ body {
   color: black;
   text-decoration: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.artistname {
+  color: white;
+  font-size: 48pt;
+}
+.artistThumb {
+  width: 14em;
+  border-radius: 0.5em;
+  border: solid #ffc000;
+  box-shadow: inset 0px 0px 0.2em 0.2em black;
 }

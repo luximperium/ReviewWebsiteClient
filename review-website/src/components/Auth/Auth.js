@@ -51,7 +51,8 @@ const Auth = (props) => {
         //     </Row>
         // </Container>
 
-        <div>
+        <div className="main">
+            <div className="mainDiv">
             <Button onClick={toggle}>Not Signed In?</Button>
             {!login ?
                 <Modal isOpen={modal} toggle={toggle}>
@@ -65,7 +66,7 @@ const Auth = (props) => {
                     <ModalFooter><Button onClick={loginToggle}>{login ? 'Signup' : 'Login'}</Button></ModalFooter>
                 </Modal>
             }
-            
+            </div>
         </div>
     )
 }

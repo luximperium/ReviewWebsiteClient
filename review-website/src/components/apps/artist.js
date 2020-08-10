@@ -1,20 +1,36 @@
 import React from 'react';
 import "../../App.css";
-import { useState } from 'react';
-import Searchbar from './searchBar'
-import { Route, Link, Switch } from "react-router-dom";
+import { useState, useEffect } from 'react';
 
-const Artist = (props) => {
+const Artist = (artistinfo) => {
+    let urltoresources = artistinfo.artistinfo
+    let resultsfromsearch = artistinfo.resultsinfo
+    console.log(resultsfromsearch)
+    const [artist, setArtist] = useState([]);
+
+    useEffect(() => {
+        if (artistinfo.artistinfo) {
+            fetch(
+                urltoresources
+              )
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                    setArtist(data);
+                });
+        }
+      }, []);
+
     return (
-        <div className="main">
-            <div className="mainDiv">
-                <h1 className="welcomeMainText">Artist Page</h1>
-                <p className="welcomeSubText">
-                    Artist Page Subtext
+        <div className="artist">
+            <div className="artistDiv">
+                <h1 className="artistname">{artist.name}</h1>
+                <img src={resultsfromsearch.thumb} className="artistThumb" />
+                <p className="artistsubtext">
+                    
                 </p>
-                <p>
-                    {props.searchresult}
-                </p>
+                {/* <img src={props[1].thumb} /> */}
+
             </div>
         </div>
     );

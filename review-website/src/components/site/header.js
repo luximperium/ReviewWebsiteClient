@@ -5,7 +5,6 @@ import {
   Nav
 } from "reactstrap";
 import "../../App.css";
-import Searchbar from "../apps/searchBar";
 
 
 const Header = () => {
@@ -15,7 +14,6 @@ const Header = () => {
         <Navbar className="header">
           <Nav className="ml-auto" navbar>
             <div className="searchNav">
-            <Searchbar />
             </div>
           </Nav>
         </Navbar>

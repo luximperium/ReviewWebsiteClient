@@ -13,6 +13,8 @@ import "../../App.css";
 import { Row, Col } from "reactstrap";
 import Artist from '../apps/artist';
 import Searchbar from "../apps/searchBar";
+import searchIcon from "../../assets/search-invert.png"
+import Search from "./search"
 
 const SidebarItem = styled.img`
     width 2em;
@@ -24,6 +26,11 @@ const Sidebar = (props) => {
     <div className="sidebar-master">
       <div className="sidebar-styling">
         <Col className="sidebar">
+        <Row className="sidebarIcon">
+            <Link to="/search">
+              <SidebarItem src={searchIcon} />
+            </Link>
+          </Row>
           <Row className="sidebarIcon">
             <Link to="/profile">
               <SidebarItem src={pfp} />
@@ -60,6 +67,9 @@ const Sidebar = (props) => {
           </Route>
           <Route exact path="/catalogs">
             <Catalogs />
+          </Route>
+          <Route exact path="/search">
+            <Search />
           </Route>
         </Switch>
       </div>
