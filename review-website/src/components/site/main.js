@@ -1,7 +1,5 @@
 import React from "react";
 import "../../App.css";
-import { Row, Col, Button } from "reactstrap";
-import SearchButton from "../../assets/search-invert.png";
 import Searchbar from "../apps/searchBar";
 
 const Main = () => {

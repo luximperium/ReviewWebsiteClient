@@ -11,7 +11,8 @@ import logout from "../../assets/logout.png";
 import styled from "styled-components";
 import "../../App.css";
 import { Row, Col } from "reactstrap";
-import Results from '../apps/results';
+import Artist from '../apps/artist';
+import Searchbar from "../apps/searchBar";
 
 const SidebarItem = styled.img`
     width 2em;
@@ -45,6 +46,12 @@ const Sidebar = (props) => {
           <Route exact path="/main">
             <Main />
           </Route>
+          <Route exact path="/">
+            <Main />
+          </Route>
+          <Route exact path="/artist">
+            <Artist />
+          </Route>
           <Route exact path="/profile">
             <Profile />
           </Route>
@@ -53,12 +60,6 @@ const Sidebar = (props) => {
           </Route>
           <Route exact path="/catalogs">
             <Catalogs />
-          </Route>
-          <Route exact path="/">
-            <Main />
-          </Route>
-          <Route exact path="/results">
-            <Results />
           </Route>
         </Switch>
       </div>
