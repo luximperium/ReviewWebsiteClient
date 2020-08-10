@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Route, Link, Switch } from "react-router-dom";
 import "../../App.css";
 import Artist from './artist';
-import Results from '../apps/results';
 import {
     Row,
     Col,
