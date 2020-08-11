@@ -125,6 +125,8 @@ body {
   color: white;
   font-size: 48pt;
   position: relative;
+  overflow: hidden;
+  max-height: 60pt;
 }
 .artistThumb {
   width: 14em;
@@ -150,8 +152,8 @@ body {
   position: relative;
   border-radius: 0.5em;
   margin-top: 1em;
-  width: 40em;
-  height: 19em;
+  width: 30em;
+  height: 15.2em;
   overflow-y: scroll;
 }
 .artistDiv {
@@ -174,16 +176,16 @@ body {
   display: table;
 }
 .col-7 {
-  float: right;
+  max-width: 40em;
   position: relative;
   content: "";
-  clear: left;
+  clear: right;
   display: table;
   border-radius: 0.5em;
   border: solid #ffc000;
   box-shadow: inset 0px 0px 0.2em 0.2em black;
   background-color: black;
-  transform: translateY(1.5em) translateX(2em);
+  transform: translateY(5.2em) translateX(3em);
 }
 .ReleaseButton {
   background-color: black;
@@ -197,4 +199,26 @@ body {
   max-height: 20em;
   max-width: 14em;
   overflow-y: scroll;
+}
+.smallalbumname {
+  color: #ffc000;
+  font-size: 18pt;
+  position: relative;
+  transform: translateX(1.9em) translateY(1.7em);
+}
+.album-info {
+  color: white;
+}
+.col-7-container {
+  max-width: 40em;
+  height: 14em;
+  position: relative;
+  content: "";
+  clear: right;
+  display: table;
+  border-radius: 0.5em;
+  border: solid #ffc000;
+  box-shadow: inset 0px 0px 0.2em 0.2em black;
+  background-color: black;
+  transform: translateY(5.3em) translateX(-15em);
 }

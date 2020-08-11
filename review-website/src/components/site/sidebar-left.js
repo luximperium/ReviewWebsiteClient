@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Link, Switch, Redirect } from "react-router-dom";
 import Main from "./main";
 import Profile from "../apps/profile";
 import Lists from "../apps/lists";
@@ -15,6 +15,7 @@ import Artist from '../apps/artist';
 import Searchbar from "../apps/searchBar";
 import searchIcon from "../../assets/search-invert.png"
 import Search from "./search"
+import Album from "../apps/album";
 
 const SidebarItem = styled.img`
     width 2em;
@@ -27,9 +28,9 @@ const Sidebar = (props) => {
       <div className="sidebar-styling">
         <Col className="sidebar">
         <Row className="sidebarIcon">
-            <Link to="/search">
+            <a href="/search">
               <SidebarItem src={searchIcon} />
-            </Link>
+            </a>
           </Row>
           <Row className="sidebarIcon">
             <Link to="/profile">
@@ -70,6 +71,9 @@ const Sidebar = (props) => {
           </Route>
           <Route exact path="/search">
             <Search />
+          </Route>
+          <Route exact path="/album">
+            <Album />
           </Route>
         </Switch>
       </div>

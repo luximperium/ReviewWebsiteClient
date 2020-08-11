@@ -17,7 +17,7 @@ const Searchbar = () => {
     if (hasSearched) {
       console.log("Hit")
       fetch(
-        `https://api.discogs.com/database/search?q=${searchterm}&per_page=10&key=rWUoIrWxrdwdVKDvrckA&secret=eLoZojJoHrrcqwLxgXLzYpWuNImuFVgz`
+        `https://api.discogs.com/database/search?type=artist&q=${searchterm}&per_page=10&key=rWUoIrWxrdwdVKDvrckA&secret=eLoZojJoHrrcqwLxgXLzYpWuNImuFVgz`
       )
         .then((response) => response.json())
         .then((data) => {
