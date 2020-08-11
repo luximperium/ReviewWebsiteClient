@@ -11,7 +11,7 @@ import logout from "../../assets/logout.png";
 import styled from "styled-components";
 import "../../App.css";
 import { Row, Col } from "reactstrap";
-import Results from '../apps/results';
+
 import ReviewIndex from '../apps/Review/ReviewIndex'
 import Artist from '../apps/artist';
 import Searchbar from "../apps/searchBar";
