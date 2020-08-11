@@ -10,9 +10,10 @@ body {
   border: solid 2px #ffc000;
 }
 .main {
-  transform: translateY(-12em) translateX(6em);
+  transform: translateY(4em) translateX(6em);
   width: fit-content;
   height: fit-content;
+  position: relative;
 }
 .welcomeMainText {
   color: white;
@@ -21,32 +22,32 @@ body {
   color: #ffc000;
 }
 .MusiqueBaseLogo {
-  position: absolute;
+  position: fixed;
   width: 8em;
   transform: translateX(6em);
-  z-index: 5;
+  z-index: 6;
 }
 .header {
   border-bottom: 1em solid #ffc000;
   background-color: black;
   height: 4.5em;
   transform: translateY(-1.5em);
+  z-index: 5;
 }
 .sidebar-styling {
   background-color: black;
   padding-bottom: 39.96em;
   position: fixed;
   padding-top: 9em;
-  transform: translateY(-22em);
   width: 4.5em;
   border-right: 1em solid #ffc000;
-  z-index: 0;
 }
 .sidebar {
   font-family: initial;
 }
 .sidebar-master {
   height: 90%;
+  z-index: 6;
 }
 .sidebarIcon {
   padding-top: 1em;
@@ -55,9 +56,10 @@ body {
 }
 .vinylrecordcss {
   z-index: 1;
-  position: relative;
+  position: fixed;
   width: 14em;
-  transform: translateY(-13em) translateX(-7.1em);
+  transform: translateY(-8.5em) translateX(-7.1em);
+  z-index: 6;
 }
 .search {
   position: static;
@@ -122,16 +124,77 @@ body {
 .artistname {
   color: white;
   font-size: 48pt;
+  position: relative;
 }
 .artistThumb {
   width: 14em;
   border-radius: 0.5em;
   border: solid #ffc000;
   box-shadow: inset 0px 0px 0.2em 0.2em black;
+  position: relative;
 }
 .artistsubtext {
   color: white;
+  border-radius: 0.5em;
+  border: solid #ffc000;
+  box-shadow: inset 0px 0px 0.2em 0.2em black;
+  background-color: black;
+  padding: 1em;
+  float: right;
+  margin-top: 1em;
+  width: 14.1em;
+  transform: translateX(-3.6em);
+}
+.artistsubtextprofile {
+  color: white;
+  position: relative;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  width: 40em;
+  height: 19em;
+  overflow-y: scroll;
 }
 .artistDiv {
   display: flex;
+  position: relative;
+}
+.header-container {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+.artist {
+  position: relative;
+}
+.col-3 {
+  float: left;
+  position: relative;
+  content: "";
+  clear: right;
+  display: table;
+}
+.col-7 {
+  float: right;
+  position: relative;
+  content: "";
+  clear: left;
+  display: table;
+  border-radius: 0.5em;
+  border: solid #ffc000;
+  box-shadow: inset 0px 0px 0.2em 0.2em black;
+  background-color: black;
+  transform: translateY(1.5em) translateX(2em);
+}
+.ReleaseButton {
+  background-color: black;
+  width: 14em;
+  margin-top: 1em;
+} 
+.profileRow {
+  position: relative;
+}
+.releaseMenu {
+  max-height: 20em;
+  max-width: 14em;
+  overflow-y: scroll;
 }
