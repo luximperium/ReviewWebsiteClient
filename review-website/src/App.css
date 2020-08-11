@@ -128,3 +128,6 @@ body {
   border: solid #ffc000;
   box-shadow: inset 0px 0px 0.2em 0.2em black;
 }
+.artistsubtext {
+  color: white;
+}

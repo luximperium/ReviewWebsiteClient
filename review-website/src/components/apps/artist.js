@@ -27,10 +27,8 @@ const Artist = (artistinfo) => {
                 <h1 className="artistname">{artist.name}</h1>
                 <img src={resultsfromsearch.thumb} className="artistThumb" />
                 <p className="artistsubtext">
-                    
+                    {artist.profile}
                 </p>
-                {/* <img src={props[1].thumb} /> */}
-
             </div>
         </div>
     );

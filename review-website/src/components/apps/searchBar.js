@@ -1,8 +1,8 @@
-import React, { useState, useEffect, Fragment } from "react";
-import { Route, Link, Switch, Redirect } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../../App.css";
 import Artist from "./artist";
-import { Row, Col, Button } from "reactstrap";
+import { Button } from "reactstrap";
 import searchIcon from '../../assets/search-invert.png'
 
 const Searchbar = () => {
