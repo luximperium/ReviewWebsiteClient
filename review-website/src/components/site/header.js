@@ -10,7 +10,7 @@ import "../../App.css";
 const Header = () => {
 
   return (
-      <header>
+      <header className="header-container">
         <Navbar className="header">
           <Nav className="ml-auto" navbar>
             <div className="searchNav">

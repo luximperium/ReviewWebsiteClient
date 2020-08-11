@@ -1,8 +1,7 @@
 body {
   background-color: gray;
-  background: linear-gradient(black 0%, gray 50%);
-  width: 100vw;
-  height: 201.5em;
+  background: fixed linear-gradient(black 0%, gray 50%);
+  height: 100vh;
 }
 .searchMain {
   height: 3em;
@@ -30,15 +29,15 @@ body {
 .header {
   border-bottom: 1em solid #ffc000;
   background-color: black;
-  height: 2.5em;
+  height: 4.5em;
+  transform: translateY(-1.5em);
 }
 .sidebar-styling {
   background-color: black;
-  position: absolute;
   padding-bottom: 39.96em;
-  padding-top: 5em;
-  height: 200em;
-  transform: translateY(-17em);
+  position: fixed;
+  padding-top: 9em;
+  transform: translateY(-22em);
   width: 4.5em;
   border-right: 1em solid #ffc000;
   z-index: 0;
@@ -46,7 +45,9 @@ body {
 .sidebar {
   font-family: initial;
 }
-
+.sidebar-master {
+  height: 90%;
+}
 .sidebarIcon {
   padding-top: 1em;
   padding-bottom: 1em;
@@ -56,7 +57,7 @@ body {
   z-index: 1;
   position: relative;
   width: 14em;
-  transform: translateY(-11em) translateX(-7.1em);
+  transform: translateY(-13em) translateX(-7.1em);
 }
 .search {
   position: static;
@@ -130,4 +131,7 @@ body {
 }
 .artistsubtext {
   color: white;
+}
+.artistDiv {
+  display: flex;
 }
