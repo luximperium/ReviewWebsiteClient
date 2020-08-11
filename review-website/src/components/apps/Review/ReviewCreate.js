@@ -13,7 +13,7 @@ const ReviewCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3000/review/create', {
+        fetch('https://tna-blue-review-server.herokuapp.com/review/create', {
             method: 'POST',
             body: JSON.stringify({review: {title: title, artistName: artistName, projectName: projectName, rating: rating, description: description}}),
             headers: new Headers ({

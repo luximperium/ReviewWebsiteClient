@@ -34,6 +34,7 @@ const Auth = (props) => {
 
   const toggle = () => setModal(!modal);
 
+
   return (
     // <Container>
     //     <Row>
@@ -55,7 +56,9 @@ const Auth = (props) => {
     //         }
     //     </Row>
     // </Container>
+    //TODO: pass modal useState & toggle function as props. We'll see if our handle submit can then toggle the state of the modal to !modal to close the modal while still submitting our fetch and returning a sessiontoken. I want this for UX. 
 
+    
     <div className="main">
       <div className="mainDiv">
         <Button onClick={toggle}>Not Signed In?</Button>

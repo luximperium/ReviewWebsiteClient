@@ -17,7 +17,7 @@ const ReviewEdit = (props) => {
 
   const reviewUpdate = (event, review) => {
     event.preventDefault();
-    fetch(`http://localhost:3000/review/${props.reviewToUpdate.id}`, {
+    fetch(`https://tna-blue-review-server.herokuapp.com/review/${props.reviewToUpdate.id}`, {
       method: "PUT",
       body: JSON.stringify({
         review: { description: editDesc, title: editTitle, rating: editRating },

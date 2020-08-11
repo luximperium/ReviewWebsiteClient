@@ -8,7 +8,7 @@ import {
   const ReviewDisplay = (props) => {
 
     const deleteReview = (review) => {
-        fetch(`http://localhost:3000/review/delete/${review.id}`, {
+        fetch(`https://tna-blue-review-server.herokuapp.com/review/delete/${review.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
