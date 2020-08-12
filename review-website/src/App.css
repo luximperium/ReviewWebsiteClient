@@ -235,5 +235,5 @@ body {
   transform: translateX(15em) translateY(-13em);
 }
 .review {
-  transform: translateY(-12em);
+  transform: translateY(-11em) translateX(2em);
 }

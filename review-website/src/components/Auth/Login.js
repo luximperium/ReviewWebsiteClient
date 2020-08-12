@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {Form, FormGroup, FormText, FormFeedback, Label, Input, Button} from 'reactstrap';
-import validateLogin from './validateLogin'
-import { useEffect } from 'react';
+// import validateLogin from './validateLogin'
 
-const Login = (props, errors) => {
+const Login = (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState({  })

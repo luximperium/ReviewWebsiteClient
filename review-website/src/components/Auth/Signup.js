@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {Form, FormGroup, Label, Input, Button, FormFeedback} from 'reactstrap';
-import validateSignup from './validateSignup';
+// import validateSignup from './validateSignup';
 
 
-const Signup = (props, errors) => {
+const Signup = (props) => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -25,7 +25,7 @@ const Signup = (props, errors) => {
             (response) => response.json()
         ) .then((data) => {
             props.updateToken(data.sessionToken)
-        })
+        })}
     
     //TODO: Use validation function to set className of the inputs ((error.length === 0) ? valid : invalid) to create visual effects. Attach this to onChange in block body(?) or in handleSubmit. setIsSubmitting, then use a useEffect monitoring cheange in error to check conditionitionally if isSubmitting is true and no errors to run our fetch
     
