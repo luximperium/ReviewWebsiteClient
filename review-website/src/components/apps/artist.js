@@ -57,8 +57,8 @@ const Artist = (artistinfo) => {
           {hasclicked ? (<Album props={songinfo} />) : (
     <div className="artist">
       <div className="artistDiv">
-        <Row className="artistRow">
-          <Col className="col-3">
+        <div className="artistRow">
+          <div className="col-3">
             <h1 className="artistname">{artist.name}</h1>
             <img src={resultsfromsearch.thumb} className="artistThumb" />
             <div className="buttonCol">
@@ -80,15 +80,15 @@ const Artist = (artistinfo) => {
                 </DropdownMenu>
               </ButtonDropdown>
             </div>
-          </Col>
-        </Row>
-        <Row className="profileRow">
+          </div>
+        </div>
+        <div className="profileRow">
           {artist.profile ? (
-            <Col className="col-7">
+            <div className="col-7">
               <p className="artistsubtextprofile">{artist.profile}</p>
-            </Col>
+            </div>
           ) : null}
-        </Row>
+        </div>
       </div>
     </div>
           )

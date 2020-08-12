@@ -130,10 +130,12 @@ body {
 }
 .artistThumb {
   width: 14em;
+  height: 14em;
   border-radius: 0.5em;
   border: solid #ffc000;
   box-shadow: inset 0px 0px 0.2em 0.2em black;
   position: relative;
+  transform: translateY(1em);
 }
 .artistsubtext {
   color: white;
@@ -153,11 +155,10 @@ body {
   border-radius: 0.5em;
   margin-top: 1em;
   width: 30em;
-  height: 15.2em;
+  height: 15em;
   overflow-y: scroll;
 }
 .artistDiv {
-  display: flex;
   position: relative;
 }
 .header-container {
@@ -185,12 +186,14 @@ body {
   border: solid #ffc000;
   box-shadow: inset 0px 0px 0.2em 0.2em black;
   background-color: black;
-  transform: translateY(5.2em) translateX(3em);
+  transform: translateX(17em) translateY(-16.4em);
 }
 .ReleaseButton {
   background-color: black;
   width: 14em;
   margin-top: 1em;
+  z-index: 10;
+  transform: translateY(1em);
 } 
 .profileRow {
   position: relative;
@@ -204,10 +207,12 @@ body {
   color: #ffc000;
   font-size: 18pt;
   position: relative;
-  transform: translateX(1.9em) translateY(1.7em);
 }
 .album-info {
   color: white;
+  max-width: 25em;
+  max-height: 15em;
+  overflow-y: scroll;
 }
 .col-7-container {
   max-width: 40em;
@@ -220,5 +225,10 @@ body {
   border: solid #ffc000;
   box-shadow: inset 0px 0px 0.2em 0.2em black;
   background-color: black;
-  transform: translateY(5.3em) translateX(-15em);
+  padding-top: 1em;
+  padding-left: 1em;
+  transform: translateX(15em) translateY(-13em);
+}
+.review {
+  transform: translateY(-12em);
 }
