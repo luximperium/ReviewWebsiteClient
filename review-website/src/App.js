@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import "./App.css";
+import Header from './components/site/header';
+import Sidebar from './components/site/sidebar-left';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Vinylrecord from './components/site/vinylrecord';
+import Musique from "./components/site/musiquebaselogo";
+
 
 function App() {
+
+  const [sessionToken, setSessionToken] = useState('');
+
+  useEffect(() => {
+    if (localStorage.getItem('token')){
+      setSessionToken(localStorage.getItem('token'));
+    }
+  }, [])
+
+
+  const clearToken = () => {
+    localStorage.clear();
+    setSessionToken('');
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Musique />    
+      <Header /> 
+      <Vinylrecord />
+      <Router>
+        <Sidebar clickLogout={clearToken} token={sessionToken} />
+      </Router>
     </div>
   );
 }
