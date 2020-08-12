@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Form, FormGroup, FormText, FormFeedback, Label, Input, Button} from 'reactstrap';
 // import validateLogin from './validateLogin'
-import APIURL from '../../../helpers/environment';
+import APIURL from '../../helpers/environment';
 
 const Login = (props) => {
     const [username, setUsername] = useState('');
