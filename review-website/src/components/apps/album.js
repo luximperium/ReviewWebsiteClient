@@ -1,24 +1,13 @@
 import React from "react";
 import "../../App.css";
 import { useState, useEffect } from "react";
-import {
-  Col,
-  Row,
-  Dropdown,
-  DropdownToggle,
-  ButtonDropdown,
-  DropdownMenu,
-  DropdownItem,
-} from "reactstrap";
-import ReviewCreate from "./Review/ReviewCreate";
-import ReviewDisplay from "./Review/ReviewDisplay";
+import ReviewIndex from "./Review/ReviewIndex";
 
 const Album = (props) => {
   const [album, setAlbum] = useState([]);
   const [albumDeeper, setAlbumDeeper] = useState([]);
 
   useEffect(() => {
-    console.log(props.props);
     setAlbum(props.props);
     fetch(
       props.props.resource_url
@@ -26,7 +15,6 @@ const Album = (props) => {
       .then((response) => response.json())
       .then((data) => {
         setAlbumDeeper(data);
-        console.log("Hit 4!");
       });
   }, []);
 
@@ -48,7 +36,7 @@ const Album = (props) => {
             </div>
       </div>
       <div className="review">
-        <ReviewCreate />
+        <ReviewIndex token={localStorage.getItem('token')} />
       </div>
     </div>
   );

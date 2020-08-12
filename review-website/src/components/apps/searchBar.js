@@ -47,7 +47,7 @@ const Searchbar = () => {
         type="text"
         onChange={(e) => setSearchterm(e.target.value)}
         className="search"
-        placeholder="Search for music..."
+        placeholder="Search for artists..."
       />
       <Button onClick={handlesearch} className="searchButton"><img className="searchButtonImage" src={searchIcon} /></Button>
       {hasSearched ? (
