@@ -8,7 +8,7 @@ import {
   const ReviewDisplay = (props) => {
 
     const deleteReview = (review) => {
-        fetch(`http://localhost:3000/review/delete/${review.id}`, {
+        fetch(`https://tna-blue-review-server.herokuapp.com/review/delete/${review.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -31,16 +31,24 @@ import {
                             {review.artistName}
                         </CardSubtitle>
                         <CardText>
-
+                            {review.description}
                         </CardText>
                         <Button>View</Button>
-                        <Button>Update</Button>
-                        <Button>Delete</Button>
+                        <Button color="warning" onClick={() => {props.editUpdateReview(review); props.updateOn()}}>Update</Button>
+                        <Button color="danger" onClick={() => {deleteReview(review)}}>Delete</Button>
                     </CardBody>
                 </Card> 
             )
         })
     }
+    return (
+        <div className="main">
+            <div className="mainDiv">
+                <h3>Your Review History</h3>
+                {reviewMapper()}
+            </div>
+        </div>
+    )
   }
 
 

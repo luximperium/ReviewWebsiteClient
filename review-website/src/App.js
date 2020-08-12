@@ -19,7 +19,6 @@ function App() {
   }, [])
 
 
-
   const clearToken = () => {
     localStorage.clear();
     setSessionToken('');
@@ -31,7 +30,7 @@ function App() {
       <Header /> 
       <Vinylrecord />
       <Router>
-        <Sidebar clickLogout={clearToken} />
+        <Sidebar clickLogout={clearToken} token={sessionToken} />
       </Router>
     </div>
   );

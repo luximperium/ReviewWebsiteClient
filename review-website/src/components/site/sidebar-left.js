@@ -11,11 +11,14 @@ import logout from "../../assets/logout.png";
 import styled from "styled-components";
 import "../../App.css";
 import { Row, Col } from "reactstrap";
+
+import ReviewIndex from '../apps/Review/ReviewIndex'
 import Artist from '../apps/artist';
 import Searchbar from "../apps/searchBar";
 import searchIcon from "../../assets/search-invert.png"
 import Search from "./search"
 import Album from "../apps/album";
+
 
 const SidebarItem = styled.img`
     width 2em;
@@ -38,7 +41,7 @@ const Sidebar = (props) => {
             </Link>
           </Row>
           <Row className="sidebarIcon">
-            <Link to="/lists">
+            <Link to="/reviews">
               <SidebarItem src={listpic} />
             </Link>
           </Row>
@@ -63,8 +66,8 @@ const Sidebar = (props) => {
           <Route exact path="/profile">
             <Profile />
           </Route>
-          <Route exact path="/lists">
-            <Lists />
+          <Route exact path="/reviews">
+            <ReviewIndex token={props.token} />
           </Route>
           <Route exact path="/catalogs">
             <Catalogs />
