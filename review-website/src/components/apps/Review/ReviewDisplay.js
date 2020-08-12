@@ -17,7 +17,7 @@ import {
         })
         .then(() => props.fetchReviews())
     }
-
+    console.log(props)
     const reviewMapper = () => {
         return props.reviews.map((review, index) => {
             return(

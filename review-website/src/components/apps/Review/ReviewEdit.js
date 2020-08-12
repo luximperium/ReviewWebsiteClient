@@ -31,7 +31,7 @@ const ReviewEdit = (props) => {
       props.updateOff();
     });
   };
-
+  console.log(props)
   return (
     <Modal isOpen={true}>
       <ModalHeader>Update your Review</ModalHeader>

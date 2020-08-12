@@ -20,8 +20,6 @@ const Album = (props) => {
 
   return (
     <div className="artist">
-      {console.log(album)}
-      {console.log(albumDeeper)}
       <div className="artistDiv">
             <h1 className="artistname">{album.artist}</h1>
             <h2 className="smallalbumname">{album.title}</h2>
@@ -36,7 +34,7 @@ const Album = (props) => {
             </div>
       </div>
       <div className="review">
-        <ReviewIndex token={localStorage.getItem('token')} />
+        <ReviewIndex token={localStorage.getItem('token')} albuminfo={albumDeeper} />
       </div>
     </div>
   );
