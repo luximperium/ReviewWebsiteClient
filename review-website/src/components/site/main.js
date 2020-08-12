@@ -1,6 +1,5 @@
 import React from "react";
 import "../../App.css";
-import Searchbar from "../apps/searchBar";
 
 const Main = () => {
   return (
@@ -8,7 +7,6 @@ const Main = () => {
       <div className="mainDiv">
         <h1 className="welcomeMainText">Welcome to Musique Base!</h1>
         <p className="welcomeSubText">The Music Rating & Reviewing Website!</p>
-        <Searchbar />
       </div>
     </div>
   );

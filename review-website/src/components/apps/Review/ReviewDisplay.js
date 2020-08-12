@@ -41,12 +41,12 @@ import {
             )
         })
     }
-
-
     return (
         <div className="main">
-            <div className="mainDiv">
+            <div className="reviewhistoryDiv">
+            <div className="reviewhistoryword">
                 <h3>Your Review History</h3>
+                </div>
                 {reviewMapper()}
             </div>
         </div>

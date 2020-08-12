@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Link, Switch, Redirect } from "react-router-dom";
 import Main from "./main";
 import Profile from "../apps/profile";
 import Lists from "../apps/lists";
@@ -13,8 +13,12 @@ import "../../App.css";
 import { Row, Col } from "reactstrap";
 
 import ReviewIndex from '../apps/Review/ReviewIndex'
+import ReviewIndexDisplay from '../apps/Review/ReviewIndexDisplay'
 import Artist from '../apps/artist';
 import Searchbar from "../apps/searchBar";
+import searchIcon from "../../assets/search-invert.png"
+import Search from "./search"
+import Album from "../apps/album";
 
 
 const SidebarItem = styled.img`
@@ -27,6 +31,11 @@ const Sidebar = (props) => {
     <div className="sidebar-master">
       <div className="sidebar-styling">
         <Col className="sidebar">
+        <Row className="sidebarIcon">
+            <a href="/search">
+              <SidebarItem src={searchIcon} />
+            </a>
+          </Row>
           <Row className="sidebarIcon">
             <Link to="/profile">
               <SidebarItem src={pfp} />
@@ -59,10 +68,16 @@ const Sidebar = (props) => {
             <Profile />
           </Route>
           <Route exact path="/reviews">
-            <ReviewIndex token={props.token} />
+            <ReviewIndexDisplay token={localStorage.getItem('token')} />
           </Route>
           <Route exact path="/catalogs">
             <Catalogs />
+          </Route>
+          <Route exact path="/search">
+            <Search />
+          </Route>
+          <Route exact path="/album">
+            <Album />
           </Route>
         </Switch>
       </div>

@@ -47,12 +47,10 @@ const ReviewIndex = (props) => {
         <div className="main">
             <div className="mainDiv">
             <div className="reviewDiv">
-                <div className="review-container">
-                <h1>Review Something</h1>
+                <div className="review-container2">
+                <h1>Your Reviews</h1>
                 </div>
-                <ReviewCreate token={props.token} fetchReviews={fetchReviews} />
                 <ReviewDisplay token={props.token} reviews={reviews} editUpdateReview={editUpdateReview} updateOn={updateOn} fetchReviews={fetchReviews} />
-                {updateActive ? <ReviewEdit reviewToUpdate={reviewToUpdate} updateOff={updateOff} token={props.token} fetchReviews={fetchReviews} /> : <></>}
                 {updateActive ? <ReviewEdit reviewToUpdate={reviewToUpdate} updateOff={updateOff} token={props.token} fetchReviews={fetchReviews}/> : <></>}
                 </div>
             </div>

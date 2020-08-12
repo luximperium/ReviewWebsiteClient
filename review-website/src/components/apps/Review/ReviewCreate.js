@@ -36,7 +36,9 @@ const ReviewCreate = (props) => {
     return(
         <div className="main createForm">
             <div className="mainDiv">
-            <h1>Create a new Review!</h1>
+                <div className="create">
+            <h1 className="create">Create a new Review!</h1>
+                </div>
             <Form onSubmit={handleSubmit}>
             <FormGroup>
                 <Label htmlFor="title">Title:</Label>
@@ -51,7 +53,10 @@ const ReviewCreate = (props) => {
                 <Input onChange={(e) => setProjectName(e.target.value)} name="projectName" value={projectName}/>
             </FormGroup>
             <FormGroup check inline>
+                <div className="ratingword">
                 <p>Rating:</p>
+                </div>
+                <div className="ratingbuttons">
                 <Label check>
                 <Input onChange={(e) => setRating(e.target.value)} type="radio" name="rating" id="ratingChoice1" value={1}  />
                 1</Label>
@@ -82,6 +87,7 @@ const ReviewCreate = (props) => {
                 <Label check>
                 <Input onChange={(e) => setRating(e.target.value)} type="radio" name="rating" id="ratingChoice10" value={10}  />
                 10</Label>
+                </div>
             </FormGroup>
             <FormGroup>
                 <Label htmlFor="description">Description:</Label>
