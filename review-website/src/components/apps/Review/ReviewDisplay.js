@@ -3,12 +3,13 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
   } from 'reactstrap';
+import APIURL from '../../../helpers/environment';
 
 
   const ReviewDisplay = (props) => {
 
     const deleteReview = (review) => {
-        fetch(`https://tna-blue-review-server.herokuapp.com/review/delete/${review.id}`, {
+        fetch(`${APIURL}/review/delete/${review.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

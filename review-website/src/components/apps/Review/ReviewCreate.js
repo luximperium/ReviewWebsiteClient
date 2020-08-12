@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import '../../../App.css'
+import APIURL from '../../../helpers/environment';
 
 
 const ReviewCreate = (props) => {
@@ -19,7 +20,7 @@ const ReviewCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('https://tna-blue-review-server.herokuapp.com/review/create', {
+        fetch(`${APIURL}/review/create`, {
             method: 'POST',
             body: JSON.stringify({review: {title: title, artistName: artistName, projectName: projectName, rating: rating, description: description}}),
             headers: new Headers ({

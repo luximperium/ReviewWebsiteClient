@@ -4,7 +4,7 @@ import ReviewCreate from "./ReviewCreate";
 import ReviewDisplay from "./ReviewDisplay";
 import ReviewEdit from "./ReviewEdit";
 import {Row, Col} from 'reactstrap';
-
+import APIURL from '../../../helpers/environment';
 
 const ReviewIndex = (props) => {
     const [reviews, setReviews] = useState([]);
@@ -12,7 +12,7 @@ const ReviewIndex = (props) => {
     const [reviewToUpdate, setReviewToUpdate] = useState([]);
 
     const fetchReviews = () => {
-        fetch('https://tna-blue-review-server.herokuapp.com/review/user/mine', {
+        fetch(`${APIURL}/review/user/mine`, {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': 'application/json',

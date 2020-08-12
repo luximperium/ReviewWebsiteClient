@@ -12,7 +12,7 @@ const ReviewIndex = (props) => {
     const [reviewToUpdate, setReviewToUpdate] = useState([]);
 
     const fetchReviews = () => {
-        fetch('https://tna-blue-review-server.herokuapp.com/review/user/mine', {
+        fetch(`${APIURL}/review/user/mine`, {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': 'application/json',

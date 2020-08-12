@@ -15,7 +15,7 @@ const Signup = (props) => {
     let handleSubmit = (event) => {
         event.preventDefault();
         //setIsSubmitting to true to be called in useEffect
-        fetch("https://tna-blue-review-server.herokuapp.com/user/signup",{
+        fetch(`${APIURL}/user/signup`,{
             method: 'POST',
             body: JSON.stringify({user:{email: email, username: username, password: password, firstName: firstName, lastName: lastName}}),
             headers: new Headers({
