@@ -41,8 +41,6 @@ import {
             )
         })
     }
-
-
     return (
         <div className="main">
             <div className="mainDiv">
