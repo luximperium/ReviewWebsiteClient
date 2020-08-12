@@ -35,7 +35,7 @@ const Signup = (props) => {
                     value={username} 
                     required
                     minLength={4}
-                    pattern="^[a-zA-Z](?:[0-9.!#$%&'*+\/=?^_`{|}~-]{1,})$"
+                    pattern="^(?=.*[A-Za-z])((?=.*\d)|(?=.*[@$!%*#?&]))[A-Za-z\d@$!%*#?&]{4,}$"
                     />
                 </FormGroup>
                 <FormGroup>
