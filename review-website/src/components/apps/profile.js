@@ -7,10 +7,13 @@ import ProfilePage from "./profilePage"
 
 const Profile = (props) => {
     const [sessionToken, setSessionToken] = useState('');
-
+    console.log(sessionToken);
+    console.log(localStorage.getItem('token'));
     useEffect(() => {
-        if (localStorage.getItem('token')){
-          setSessionToken(localStorage.getItem('token'));
+        if (localStorage.getItem('token') === undefined){
+          setSessionToken('broken');
+        } else if (localStorage.getItem('token')) {
+          setSessionToken(localStorage.getItem('token'))
         }
       }, [])
 

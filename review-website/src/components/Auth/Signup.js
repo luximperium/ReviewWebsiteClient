@@ -1,20 +1,20 @@
-import React, {useState} from 'react';
-import {Form, FormGroup, Label, Input, Button, FormFeedback} from 'reactstrap';
-import validateSignup from './validateSignup';
+import React, {useState, useEffect} from 'react';
+import {Form, FormGroup, Label, Input, Button, FormFeedback, ButtonToggle} from 'reactstrap';
+// import validateSignup from './validateSignup';
 
 
-const Signup = (props, errors) => {
+const Signup = (props) => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [errors, setErrors] = useState({})
-    const [isSubmitting, setIsSubmitting] = useState(false)
+    // const [errors, setErrors] = useState({})
+    // const [isSubmitting, setIsSubmitting] = useState(false)
 
     let handleSubmit = (event) => {
         event.preventDefault();
-        //setIsSubmitting to true to be called in useEffect
+
         fetch("https://tna-blue-review-server.herokuapp.com/user/signup",{
             method: 'POST',
             body: JSON.stringify({user:{email: email, username: username, password: password, firstName: firstName, lastName: lastName}}),
@@ -25,13 +25,29 @@ const Signup = (props, errors) => {
             (response) => response.json()
         ) .then((data) => {
             props.updateToken(data.sessionToken)
+        }) .then(() => {
+            if(localStorage.getItem('token')) {
+                props.toggle();
+            }
         })
+    }
+
     
+
+
+        // setErrors(validateSignup(username, email, password)));
+        // console.log(errors)
+        //setIsSubmitting(true);
+        
+    
+
+    
+
     //TODO: Use validation function to set className of the inputs ((error.length === 0) ? valid : invalid) to create visual effects. Attach this to onChange in block body(?) or in handleSubmit. setIsSubmitting, then use a useEffect monitoring cheange in error to check conditionitionally if isSubmitting is true and no errors to run our fetch
     
     return(
         <div>
-            <Form onSubmit={handleSubmit} noValidate>
+            <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor="username">Username:</Label>
                     <Input 
@@ -42,9 +58,9 @@ const Signup = (props, errors) => {
                     placeholder="username1"
                     minLength={4}
                     pattern="^(?=.*[A-Za-z])((?=.*\d)|(?=.*[@$!%*#?&]))[A-Za-z\d@$!%*#?&]{4,}$"
-                    
+                    //className= {errors.username ? ":invalid" : ":valid}"}
                     />
-                    <FormFeedback>Test</FormFeedback>
+                    <FormFeedback></FormFeedback>
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="email">Email:</Label>
@@ -56,7 +72,9 @@ const Signup = (props, errors) => {
                     type="email"
                     pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
                     placeholder="user@email.com"
+                    //className= {errors.email ? ":invalid" : ":valid}"}
                     />
+                    <FormFeedback></FormFeedback>
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="password">Password:</Label>
@@ -68,7 +86,9 @@ const Signup = (props, errors) => {
                     type="password"
                     minLength={5}
                     placeholder="******"
+                    //className= {errors.password ? ":invalid" : ":valid}"}
                     />
+                    <FormFeedback></FormFeedback>
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="firstName">First Name:</Label>
@@ -88,6 +108,6 @@ const Signup = (props, errors) => {
             </Form>
         </div>
     )
-}
+    }
 
 export default Signup;
