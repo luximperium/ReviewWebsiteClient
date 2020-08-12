@@ -79,11 +79,9 @@ body {
 .searchButtonImage {
   width: 25px;
 }
-
 .createForm {
   transform: translateY(-1em) translateX(-2em);
 }
-
 .searchList {
   list-style: square;
   color: black;
@@ -235,5 +233,36 @@ body {
   transform: translateX(15em) translateY(-13em);
 }
 .review {
-  transform: translateY(-11em) translateX(2em);
+  transform: translateY(-15em) translateX(-5.89em);
+}
+.review-container {
+  color: white;
+  transform: translateX(-2em);
+}
+.create {
+  color: #ffc000;
+  font-size: 18pt;
+  padding-top: 0.5em;
+}
+.ratingword {
+  transform: translateY(0.5em);
+}
+.ratingbuttons {
+  transform: translateX(1em);
+}
+.reviewhistoryword {
+  color: white;
+}
+.reviewDiv {
+  transform: translateX(2em);
+}
+.reviewDivtwo {
+  transform: translateX(3em);
+}
+.reviewhistoryDiv {
+  transform: translateX(-8em) translateY(-3em);
+}
+.review-container2 {
+  color: #ffc000;
+  transform: translateX(-2em);
 }
