@@ -2,14 +2,16 @@ import React, {useState, useEffect} from 'react';
 import {Form, FormGroup, FormText, FormFeedback, Label, Input, Button} from 'reactstrap';
 // import validateLogin from './validateLogin'
 
+
 const Login = (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [errors, setErrors] = useState({  })
+    // const [errors, setErrors] = useState({  })
     
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
         fetch("https://tna-blue-review-server.herokuapp.com/user/login",{
             method: 'POST',
             body: JSON.stringify({user:{username: username, password: password}}),
@@ -20,7 +22,11 @@ const Login = (props) => {
             (response) => response.json()
         ) .then((data) => {
             props.updateToken(data.sessionToken)
-        }) 
+        }) .then(() => {
+            if(localStorage.getItem('token')) {
+                props.toggle();
+            }
+        })
 
         
     }
