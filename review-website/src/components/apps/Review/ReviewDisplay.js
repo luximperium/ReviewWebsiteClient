@@ -36,7 +36,7 @@ import APIURL from '../../../helpers/environment';
                             {review.artistName}
                         </CardSubtitle>
                         <CardSubtitle>
-                            {projectName}
+                            {review.projectName}
                         </CardSubtitle>
                         <CardText>
                             {review.description}

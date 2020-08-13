@@ -14,7 +14,7 @@ const ReviewCreate = (props) => {
     console.log(`${APIURL}/review/user/mine`)
 
     useEffect(() => {
-        setProjectName(String(props.info.id))
+        setProjectName(String(props.info.title))
         setArtistName(String(props.regularinfo.artist))
         }, [props.info]);
 
