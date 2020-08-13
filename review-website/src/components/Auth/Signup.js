@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import {Form, FormGroup, Label, Input, Button, FormFeedback, ButtonToggle} from 'reactstrap';
-import React, {useState} from 'react';
 import {Form, FormGroup, Label, Input, Button, FormFeedback} from 'reactstrap';
 // import validateSignup from './validateSignup';
 import APIURL from '../../helpers/environment';
@@ -42,7 +40,7 @@ const Signup = (props) => {
         //setIsSubmitting(true);
         
     
-        })}
+        
 
     
 
