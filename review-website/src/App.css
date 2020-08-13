@@ -42,12 +42,9 @@ body {
   width: 4.5em;
   border-right: 1em solid #ffc000;
 }
-.sidebar {
-  font-family: initial;
-}
 .sidebar-master {
   height: 90%;
-  z-index: 6;
+  z-index: 11;
 }
 .sidebarIcon {
   padding-top: 1em;
@@ -265,4 +262,9 @@ body {
 .review-container2 {
   color: #ffc000;
   transform: translateX(-2em);
+}
+.card {
+  border-radius: 0.5em;
+  border: solid #ffc000;
+  box-shadow: inset 0px 0px 0.2em 0.2em black;
 }

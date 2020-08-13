@@ -34,7 +34,7 @@ const Album = (props) => {
             </div>
       </div>
       <div className="review">
-        <ReviewIndex token={localStorage.getItem('token')} albuminfo={albumDeeper} />
+        <ReviewIndex token={localStorage.getItem('token')} albuminfo={albumDeeper} albumregular={album} />
       </div>
     </div>
   );

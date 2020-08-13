@@ -10,13 +10,13 @@ const ReviewCreate = (props) => {
     const [projectName, setProjectName] = useState([]);
     const [rating, setRating] = useState('');
     const [description, setDescription] = useState('');
-    
+
+    console.log(`${APIURL}/review/user/mine`)
+
     useEffect(() => {
-        setProjectName(String(props.info.id))
-        setArtistName(props.info.artists)
-        }, [props.info.artists]);
-        console.log(projectName)
-        console.log(artistName)
+        setProjectName(String(props.info.title))
+        setArtistName(String(props.regularinfo.artist))
+        }, [props.info]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
