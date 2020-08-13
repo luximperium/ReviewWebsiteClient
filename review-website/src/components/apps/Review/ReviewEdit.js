@@ -9,6 +9,7 @@ import {
   ModalHeader,
   ModalBody,
 } from "reactstrap";
+import APIURL from "../../../helpers/environment";
 
 const ReviewEdit = (props) => {
   const [editDesc, setEditDesc] = useState(props.reviewToUpdate.description);
@@ -17,7 +18,7 @@ const ReviewEdit = (props) => {
 
   const reviewUpdate = (event, review) => {
     event.preventDefault();
-    fetch(`https://tna-blue-review-server.herokuapp.com/review/${props.reviewToUpdate.id}`, {
+    fetch(`${APIURL}/review/${props.reviewToUpdate.id}`, {
       method: "PUT",
       body: JSON.stringify({
         review: { description: editDesc, title: editTitle, rating: editRating },
@@ -31,7 +32,7 @@ const ReviewEdit = (props) => {
       props.updateOff();
     });
   };
-
+  console.log(props)
   return (
     <Modal isOpen={true}>
       <ModalHeader>Update your Review</ModalHeader>

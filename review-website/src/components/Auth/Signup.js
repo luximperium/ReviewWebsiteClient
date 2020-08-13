@@ -3,7 +3,7 @@ import {Form, FormGroup, Label, Input, Button, FormFeedback, ButtonToggle} from 
 import React, {useState} from 'react';
 import {Form, FormGroup, Label, Input, Button, FormFeedback} from 'reactstrap';
 // import validateSignup from './validateSignup';
-
+import APIURL from '../../helpers/environment';
 
 const Signup = (props) => {
     const [username, setUsername] = useState('');
@@ -16,8 +16,8 @@ const Signup = (props) => {
 
     let handleSubmit = (event) => {
         event.preventDefault();
-
-        fetch("https://tna-blue-review-server.herokuapp.com/user/signup",{
+        //setIsSubmitting to true to be called in useEffect
+        fetch(`${APIURL}/user/signup`,{
             method: 'POST',
             body: JSON.stringify({user:{email: email, username: username, password: password, firstName: firstName, lastName: lastName}}),
             headers: new Headers({

@@ -1,19 +1,26 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import '../../../App.css'
+import APIURL from '../../../helpers/environment';
 
 
 const ReviewCreate = (props) => {
     const [title, setTitle] = useState('');
-    const [artistName, setArtistName] = useState('');
-    const [projectName, setProjectName] = useState('');
+    const [artistName, setArtistName] = useState("");
+    const [projectName, setProjectName] = useState([]);
     const [rating, setRating] = useState('');
     const [description, setDescription] = useState('');
-    
+
+    console.log(`${APIURL}/review/user/mine`)
+
+    useEffect(() => {
+        setProjectName(String(props.info.id))
+        setArtistName(String(props.regularinfo.artist))
+        }, [props.info]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('https://tna-blue-review-server.herokuapp.com/review/create', {
+        fetch(`${APIURL}/review/create`, {
             method: 'POST',
             body: JSON.stringify({review: {title: title, artistName: artistName, projectName: projectName, rating: rating, description: description}}),
             headers: new Headers ({
@@ -25,8 +32,6 @@ const ReviewCreate = (props) => {
         .then((reviewData) => {
           console.log(reviewData);
           setTitle('');
-          setArtistName('');
-          setProjectName('');
           setRating('');
           setDescription('');
           props.fetchReviews();
@@ -43,14 +48,6 @@ const ReviewCreate = (props) => {
             <FormGroup>
                 <Label htmlFor="title">Title:</Label>
                 <Input onChange={(e) => setTitle(e.target.value)} name="title" value={title}/>
-            </FormGroup>
-            <FormGroup>
-                <Label htmlFor="artistName">Artist Name:</Label>
-                <Input onChange={(e) => setArtistName(e.target.value)} name="artistName" value={artistName}/>
-            </FormGroup>
-            <FormGroup>
-                <Label htmlFor="projectName">Project Name:</Label>
-                <Input onChange={(e) => setProjectName(e.target.value)} name="projectName" value={projectName}/>
             </FormGroup>
             <FormGroup check inline>
                 <div className="ratingword">

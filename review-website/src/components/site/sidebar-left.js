@@ -13,7 +13,7 @@ import "../../App.css";
 import { Row, Col } from "reactstrap";
 
 import ReviewIndex from '../apps/Review/ReviewIndex'
-import ReviewIndexDisplay from '../apps/Review/ReviewIndexDisplay'
+import ReviewDisplay from '../apps/Review/ReviewDisplay'
 import Artist from '../apps/artist';
 import Searchbar from "../apps/searchBar";
 import searchIcon from "../../assets/search-invert.png"
@@ -41,11 +41,6 @@ const Sidebar = (props) => {
               <SidebarItem src={pfp} />
             </Link>
           </Row>
-          <Row className="sidebarIcon">
-            <Link to="/reviews">
-              <SidebarItem src={listpic} />
-            </Link>
-          </Row>
           <Link to="/main">
           <Row className="sidebarIcon">
               <SidebarItem onClick={props.clickLogout} src={logout} />
@@ -66,9 +61,6 @@ const Sidebar = (props) => {
           </Route>
           <Route exact path="/profile">
             <Profile />
-          </Route>
-          <Route exact path="/reviews">
-            <ReviewIndexDisplay token={localStorage.getItem('token')} />
           </Route>
           <Route exact path="/catalogs">
             <Catalogs />

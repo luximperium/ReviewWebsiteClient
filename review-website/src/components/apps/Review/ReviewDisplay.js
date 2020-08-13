@@ -1,14 +1,20 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
   } from 'reactstrap';
+import APIURL from '../../../helpers/environment'; 
 
 
   const ReviewDisplay = (props) => {
+    const [projectName, setProjectName] = useState([]);
+
+    useEffect(() => {
+        setProjectName(String(props.info.title))
+        }, [props.info]);
 
     const deleteReview = (review) => {
-        fetch(`https://tna-blue-review-server.herokuapp.com/review/delete/${review.id}`, {
+        fetch(`${APIURL}/review/delete/${review.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -21,14 +27,16 @@ import {
     const reviewMapper = () => {
         return props.reviews.map((review, index) => {
             return(
-                <Card key={index}>
-                    <CardImg alt="Review Image Here" />
+                <Card className="card" key={index}>
                     <CardBody>
                         <CardTitle>
                             {review.title}
                         </CardTitle>
                         <CardSubtitle>
                             {review.artistName}
+                        </CardSubtitle>
+                        <CardSubtitle>
+                            {projectName}
                         </CardSubtitle>
                         <CardText>
                             {review.description}
@@ -52,6 +60,5 @@ import {
         </div>
     )
   }
-
 
   export default ReviewDisplay;

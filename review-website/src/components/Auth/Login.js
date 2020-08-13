@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Form, FormGroup, FormText, FormFeedback, Label, Input, Button} from 'reactstrap';
 // import validateLogin from './validateLogin'
+import APIURL from '../../helpers/environment';
 
 
 const Login = (props) => {
@@ -11,8 +12,7 @@ const Login = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        fetch("https://tna-blue-review-server.herokuapp.com/user/login",{
+        fetch(`${APIURL}/user/login`,{
             method: 'POST',
             body: JSON.stringify({user:{username: username, password: password}}),
             headers: new Headers({
