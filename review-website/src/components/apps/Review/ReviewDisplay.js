@@ -39,6 +39,9 @@ import APIURL from '../../../helpers/environment';
                             {review.projectName}
                         </CardSubtitle>
                         <CardText>
+                            {review.rating}
+                        </CardText>
+                        <CardText>
                             {review.description}
                         </CardText>
                         <Button>View</Button>
