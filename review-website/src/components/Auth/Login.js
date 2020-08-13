@@ -3,10 +3,11 @@ import {Form, FormGroup, FormText, FormFeedback, Label, Input, Button} from 'rea
 // import validateLogin from './validateLogin'
 import APIURL from '../../helpers/environment';
 
+
 const Login = (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [errors, setErrors] = useState({  })
+    // const [errors, setErrors] = useState({  })
     
 
     const handleSubmit = (event) => {
@@ -21,7 +22,11 @@ const Login = (props) => {
             (response) => response.json()
         ) .then((data) => {
             props.updateToken(data.sessionToken)
-        }) 
+        }) .then(() => {
+            if(localStorage.getItem('token')) {
+                props.toggle();
+            }
+        })
 
         
     }

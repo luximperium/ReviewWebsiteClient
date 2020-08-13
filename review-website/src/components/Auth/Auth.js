@@ -65,7 +65,7 @@ const Auth = (props) => {
           <Modal isOpen={modal} toggle={toggle}>
             <ModalHeader toggle={toggle}>{title()}</ModalHeader>
             <ModalBody>
-              <Signup updateToken={updateToken} />
+              <Signup updateToken={updateToken} toggle={toggle} />
             </ModalBody>
             <ModalFooter>
               <Button onClick={loginToggle}>
@@ -77,7 +77,7 @@ const Auth = (props) => {
           <Modal isOpen={modal} toggle={toggle}>
             <ModalHeader toggle={toggle}>{title()}</ModalHeader>
             <ModalBody>
-              <Login updateToken={updateToken} onSubmit={toggle} />
+              <Login updateToken={updateToken} toggle={toggle} />
             </ModalBody>
             <ModalFooter>
               <Button onClick={loginToggle}>
